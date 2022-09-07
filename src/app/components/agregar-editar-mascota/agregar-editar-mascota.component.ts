@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-agregar-editar-mascota',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgregarEditarMascotaComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup
+
+  constructor(private fb: FormBuilder) { 
+    this.form = this.fb.group({
+      nombre: ['', Validators.required],
+      raza: ['', Validators.required],
+      color: ['', Validators.required],
+      edad: ['', Validators.required],
+      peso: ['', Validators.required],
+    })
+  }
 
   ngOnInit(): void {
   }

@@ -9,6 +9,8 @@ const routes: Routes = [
   { path: 'listado-mascotas', component: ListadoMascotaComponent},
   { path: 'agregar-mascota', component: AgregarEditarMascotaComponent},
   { path: 'ver-mascota/:id', component: VerMascotaComponent},
+  { path: 'editar-mascota/:id', component: AgregarEditarMascotaComponent},
+  { path: '**', redirectTo: 'listado-mascotas'}
 ];
 
 @NgModule({

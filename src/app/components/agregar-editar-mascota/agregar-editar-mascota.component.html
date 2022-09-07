@@ -1,1 +1,48 @@
-<p>agregar-editar-mascota works!</p>
+<div class="titulo">
+    <h1>Agregar Mascota</h1>
+</div>
+<form [formGroup]="form">
+    <div class="container">
+        <mat-card>
+            <mat-card-subtitle>
+                Datos de la mascota
+            </mat-card-subtitle>
+            <mat-grid-list cols="2" rowHeight="80px">
+                <mat-grid-tile [colspan]="2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Nombre</mat-label>
+                        <input type="text" formControlName="nombre" matInput>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Edad</mat-label>
+                        <input type="number" formControlName="edad" matInput>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Raza</mat-label>
+                        <input type="text" formControlName="raza" matInput>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Color</mat-label>
+                        <input type="text" formControlName="color" matInput>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Peso</mat-label>
+                        <input type="number" formControlName="peso" matInput>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
+                    <button mat-raised-button color="warn">Confirmar</button>
+                    <button routerLink="/listado-mascotas" mat-raised-button>Volver</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-card>
+    </div>
+</form>
