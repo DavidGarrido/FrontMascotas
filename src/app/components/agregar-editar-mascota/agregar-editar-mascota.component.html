@@ -1,7 +1,7 @@
 <div class="titulo">
     <h1>Agregar Mascota</h1>
 </div>
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="agregarMascota()">
     <div class="container">
         <mat-card>
             <mat-card-subtitle>
@@ -39,7 +39,7 @@
                     </mat-form-field>
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="2">
-                    <button mat-raised-button color="warn">Confirmar</button>
+                    <button type="submit" mat-raised-button color="warn">Confirmar</button>
                     <button routerLink="/listado-mascotas" mat-raised-button>Volver</button>
                 </mat-grid-tile>
             </mat-grid-list>

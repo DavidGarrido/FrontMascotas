@@ -22,5 +22,8 @@ export class AgregarEditarMascotaComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  agregarMascota(){
+    console.log("agregar mascota")
+  }
 
 }
